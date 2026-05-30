@@ -290,7 +290,8 @@ class ChaoxingHttpClient private constructor(
                                 jsonResult.getString("uname"),
                                 jsonResult.getString("pic").replace("http://", "https://"),
                                 jsonResult.getInteger("puid"),
-                                phoneNumber
+                                phoneNumber,
+                                jsonResult.getString("clientId")
                             )
                         }
                 }.getOrElse { throwable ->
